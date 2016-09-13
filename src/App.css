@@ -1,0 +1,17 @@
+.generation {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cell {
+	width: 20px;
+	height: 20px;
+}
+
+.cell.state--0 {
+	background-color: grey;
+}
+
+.cell.state--1 {
+	background-color: black;
+}

@@ -5,7 +5,7 @@ import AutomataGrid from './AutomataGrid'
 
 const rootElement = document.getElementById('root')
 
-const matrix = automata(50, 64, 60)
+const matrix = automata(54, [50, 40])
 const automataGrid = <AutomataGrid matrix={matrix} />
 
 render(automataGrid, rootElement)

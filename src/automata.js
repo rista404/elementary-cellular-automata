@@ -45,7 +45,7 @@ export function getGenerations(rule, matrix, n) {
 }
 
 
-export default function automata(number, x = 60, y = 60) {
+export default function automata(number, [x, y] = [60, 60]) {
 	const rule = compose(map(Number), reverse, dec2bin)(number)
 	const randomGeneration = getNRandomBinaries(x)
 

@@ -5,7 +5,12 @@ import AutomataGrid from './AutomataGrid'
 
 const rootElement = document.getElementById('root')
 
-const matrix = automata(54, [50, 40])
+const cellsX = Math.floor(window.innerWidth / 14)
+const cellsY = Math.floor(window.innerHeight / 14)
+
+const rule = 90
+
+const matrix = automata(rule, [cellsX, cellsY])
 const automataGrid = <AutomataGrid matrix={matrix} />
 
 render(automataGrid, rootElement)

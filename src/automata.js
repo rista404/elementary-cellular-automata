@@ -3,6 +3,8 @@ import { getNRandomBinaries, dec2bin } from './utils'
 
 // mapStatesToNewStateByRule :: [Int] -> Int -> Int -> Int -> Int
 export const mapStatesToNewStateByRule = curry((rule, left, top, right) => {
+	if(!rule) throw new Error('No rule specified')
+
 	if(left && top && right) return rule[7]
 	if(left && top && !right) return rule[6]
 	if(left && !top && right) return rule[5]
@@ -15,6 +17,8 @@ export const mapStatesToNewStateByRule = curry((rule, left, top, right) => {
 
 // getCellStates :: [Int] -> [Int] -> [Int]
 export const getCellStates = (rule, lastGeneration) => {
+	if(!lastGeneration || !rule) return []
+
 	const lastGenerationLength = length(lastGeneration)
 
 	return lastGeneration.reduce((allNewCells, topCellState, topCellIndex, lastGeneration) => {
